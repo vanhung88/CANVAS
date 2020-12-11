@@ -1,0 +1,338 @@
+$color-white: #fff;
+$color-black: black;
+$font-family--karala: "Karla", sans-serif;
+$heigth__navbar: 70px;
+$text-color: #555;
+$text-color-B: #333;
+
+html{
+  font-size: 62.5%;
+  line-height: 1.4rem;
+  box-sizing: border-box;
+  font-family: "Karla", sans-serif !important;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+body {
+  background-color: #f5f5f5; //mau nen ca trang
+}
+
+.header {
+  background: url(http://themes.semicolonweb.com/html/canvas/demos/store/images/slider/3.jpg) top center no-repeat;
+  background-size: cover;
+  height: 100vh;
+
+  background-position-y: -110px;
+  position: relative;
+}
+.header__navbar {
+  z-index: 1;
+  height: $heigth__navbar;
+  width: 100%;
+  top: 0;
+  margin-top: 20px;
+  position: fixed;
+  background-color: rgba(255, 255, 255, 0);
+  display: flex;
+  justify-content: space-between;
+  .header__navbar__logo {
+    padding: 0;
+    height: $heigth__navbar;
+    .header__navbar__logo--while {
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+  
+  ul.header__navbar__menu-list {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    li.header__navbar__menu-iteams {
+      margin: 0 20px;
+      list-style: none;
+      font-size: 1.35rem;
+      font-weight: 600;
+      color: rgb(255, 255, 255);
+      // font-family: $font-family--karala;
+      cursor: pointer;
+      .header__navbar-icon {
+        size: 2rem;
+        padding-left: 5px;
+      }
+    }
+  }
+}
+
+.header__navbar__account {
+  padding: 0 !important;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  .header__navbar__account-text {
+    .header__navbar-link {
+      font-size: 1.35rem;
+      font-weight: 600;
+      color: $color-white;
+      cursor: pointer;
+    }
+  }
+}
+// end navigation
+
+.header::before , .store__product-type::before{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  // background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.774) , rgba(10, 10, 10, 0.158) , rgba(0, 0, 0, 0.774) );
+  background-color: rgba(0, 0, 0, 0.281);
+}
+
+.header__navbar:hover {
+  transition: 0.3s;
+  background-color: $color-white;
+  .header__navbar-link,
+  .header__navbar__menu-iteams {
+    color: #292d31f1 !important;
+  }
+  .header__navbar__logo--while {
+    display: block !important;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  box-shadow: 1px 1px 5px rgb(117, 117, 117);
+}
+
+//header__navbar-mid
+.header__navbar-mid {
+  width: 100vw;
+  position: absolute;
+  top: 40%;
+
+  .header__navbar-mid__describe {
+    width: 100%;
+    text-align: center;
+    h2.header__navbar-mid__text-huge {
+      color: $color-white;
+      font-size: 5.5rem;
+      font-weight: 700;
+      padding: 15x 0;
+    }
+    p.header__navbar-mid__text-small {
+      font-size: 2rem;
+      color: $color-white;
+      padding-bottom: 14px;
+    }
+  }
+  .header__navbar-mid__button {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.btn-white--women:hover,
+.btn-white--men:hover {
+  background-color: $text-color !important;
+  color: $color-white !important;
+}
+//end navbar mid
+
+//navbar bot
+
+.header__navbar-bot {
+  position: absolute;
+  left: 0;
+  bottom: 40px;
+  .header__navbar-bot__icon {
+    font-size: 1.5rem;
+    padding: 0 10px;
+  }
+}
+
+// phan than
+.store {
+}
+.container-store__describe {
+  margin: 65px 0 40px 0;
+  .describe-up,
+  .describe-down {
+    color: $text-color;
+    // font-family: $font-family--karala;
+    text-align: center;
+    color: $text-color;
+  }
+  .describe-up {
+    font-size: 3.5rem;
+    padding-bottom: 20px;
+    font-weight: 700;
+  }
+  .describe-down {
+    text-align: center;
+    padding: 0 330px;
+    font-size: 1.5rem;
+    line-height: 3rem;
+  }
+}
+
+// ptoduct all
+.store__product-type {
+  position: relative;
+  .store__product-img {
+    width: 100%;
+    height: 100%;
+  }
+  .box{
+    padding: 24px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    .store__product__sale{
+      font-size: 2.7rem;
+      font-weight: 600;
+      color:#EEE;
+      padding-bottom: 140px;
+    }
+    .type-name{
+      color:#EEE;
+      font-size: 2.7rem;
+      padding-bottom: 10px;
+    }
+    p{
+      font-size: 1.5rem;
+      color: #EEE;
+      font-weight: 400;
+      padding-bottom: 40px;
+    }
+  }
+}
+//hover for shop now
+button.btn-shopnow:hover{
+  background-color: $text-color;
+  color: $color-white;
+}
+
+// product list
+.product-list {
+  min-height: 1px;
+  width: 100%;
+  margin-top: 80px;
+}
+.product__describ {
+  ul.product__describ__list {
+    .product__describ__list-items {
+      list-style: none;
+      padding: 4px 0;
+      cursor: pointer;
+      .product__describ__list-items-link {
+        color: $text-color;
+        font-size: 1.6rem;
+        text-decoration: none;
+        padding: 10px;
+        color: #888;
+      }
+    }
+  }
+}
+.product__describ__list-items:hover {
+  background-color: rgb(241, 236, 236);
+  transition: 0.2s;
+  .product__describ__list-items-link {
+    color: #444 !important;
+    transition: 0.2s;
+  }
+}
+// view product
+a.store-product-items {
+  margin-bottom: 40px;
+  text-decoration: none !important;
+  display: block;
+  justify-content: center;
+  .store-product-items__img {
+    width: 100%;
+  }
+  .product-cart{
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    span{
+      color: $text-color-B;
+      font-size: 1.5rem;
+      font-weight: 550;
+    }
+    padding: 8px 0;
+    margin: 0 15px;
+    position: absolute;
+    bottom: 106px;
+    right: 6px;
+    left: 6px;
+    
+  }
+
+  .product-imformation {
+    display: flex;
+    justify-content: space-between;
+    .product-imformation__name,
+    .product-imformation__price {
+      padding-top: 10px;
+      font-size: 1.7rem;
+      color: $text-color-B;
+      font-weight: 600;
+    }
+  }
+  .factory {
+    font-size: 1.7rem;
+    color: $text-color;
+  }
+}
+a.store-product-items:hover {
+  .product-cart{
+    opacity: 1;
+    animation: fadein ease-in 0.2s;
+    background-color: $color-white;
+  }
+}
+.product-cart:hover{
+  transition: 0.2s;
+  background-color: $text-color !important;
+  span{
+    transition: 0.2s;
+    color: $color-white !important;
+  }
+}
+
+.footer{
+  background-color: rgb(0, 0, 0);
+}
+.store-footer{
+  margin: 50px 0 50px 0;
+  .footer-name{
+    color: $color-white;
+    font-size:2.2rem;
+    padding-bottom: 20px;
+  }
+  .footer-describle{
+    color: $text-color;
+    font-size: 1.5rem;
+    line-height: 2.2rem;
+  }
+}
+
+// base
+  button.btn-shop {
+    background-color: $color-white;
+    color: $text-color;
+    font-size: 1.5rem;
+    padding: 10px 20px;
+    border-radius: 1px; 
+    font-weight: 600;
+    margin: 0;
+  }
